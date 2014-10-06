@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_EikonLayout.cshtml";
+}
+<div class="page-wrapper" style="display: block;" ng-app="nemoApp" ng-controller="appCtrl">
+    <div class="page-header">
+        <span class="page-header-title">
+            Eikon Game Nemo
+        </span>
+        <span class="page-header-subtitle"><strong>Demo Site</strong> - News Analysis</span>
+    </div>
+    <div class="main-tabs">
+        <ul class="nav-tabs-wr">
+            <li class="nav-tabs-item" ng-class="{'nav-tabs-item-selected': setting.activeTab==='home'}">
+                <a class="nav-tabs-link" ui-sref="home">HOME</a>
+            </li>
+            <li class="nav-tabs-item" ng-class="{'nav-tabs-item-selected': setting.activeTab==='news'}">
+                <a class="nav-tabs-link" ui-sref="news">NEWS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="page-content" ui-view>
+    </div>
+</div>
